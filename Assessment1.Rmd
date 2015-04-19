@@ -1,7 +1,7 @@
 ---
 title: "Assessment1"
 author: "Michael Yefremov"
-date: "Sunday, March 15, 2015"
+date: "Sunday, April 19, 2015"
 output: html_document
 ---
 ###Loading and preprocessing data
