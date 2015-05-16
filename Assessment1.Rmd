@@ -1,7 +1,7 @@
 ---
 title: "Assessment1"
 author: "Michael Yefremov"
-date: "Sunday, April 19, 2015"
+date: "Sunday, May 16, 2015"
 output: html_document
 ---
 ###Loading and preprocessing data
@@ -46,7 +46,7 @@ median_withoutNA <- median (StepsPerDay$steps_pd)
 So **mean** is `r as.integer(mean_withoutNA)` and **median** is `r median_withoutNA`.
 
 ###What is the average daily activity pattern?
-Let it obtains average daily activity and make a time series plot.
+Let it obtain the average daily activity and make a time series plot.
 
 ```{r daily }
 DailyActivity <- ddply (fl_g, .(interval), summarise, steps_pi = mean(steps))
