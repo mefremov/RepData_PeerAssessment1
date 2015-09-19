@@ -1,10 +1,10 @@
 ---
 title: "Assessment1"
 author: "Michael Yefremov"
-date: "Sunday, August 16, 2015"
+date: "September 16, 2015"
 output: html_document
 ---
-###Loading and preprocessing data
+### Loading and preprocessing data
 The first step of this assigment is to load data. So be sure that there are unziped file with data ("activity.csv") in your working directory.
 
 ```r
@@ -26,7 +26,7 @@ Let converts variable **date** into Date-format for convinience
 fl$date <- as.Date (fl$date)
 ```
 
-###What is mean total number of steps taken per day?
+### What is mean total number of steps taken per day?
 
 Now it should be obtain the total number of steps per day. For this I will use *plyr* package. But at first exclude NA values.
 
@@ -63,7 +63,7 @@ median_withoutNA <- median (StepsPerDay$steps_pd)
 ```
 So **mean** is 10767 and **median** is 10765.
 
-###What is the average daily activity pattern?
+### What is the average daily activity pattern?
 Let it obtain the average daily activity and make a time series plot.
 
 
@@ -85,7 +85,7 @@ max_i <- DailyActivity [DailyActivity$steps_pi == max(DailyActivity$steps_pi), "
 
 So the 5-minute interval which contains the maximum number of steps is **835**
 
-###Inputing missing values
+### Inputing missing values
 
 Now I'm going to obtain number of missing values:
 
@@ -124,7 +124,7 @@ ggplot(StepsPerDay_n, aes(steps_pd)) +
 
 ![plot of chunk making hist of new data set total number of steps taken each day](figure/making hist of new data set total number of steps taken each day-1.png) 
 
-As wew can see number of days in the interval 10000-12000 steps increased as compared with previous histogram.  
+As we can see number of days in the interval 10000-12000 steps increased as compared with previous histogram.  
 Now I'm going to calculate **NEW** **mean** and **median** of the total number of the steps per day and compare they with previous. 
 
 ```r
@@ -135,7 +135,7 @@ median_filledNA <- median (StepsPerDay_n$steps_pd)
 So NEW **mean** is 10785 and is PREVIOUS (where NA omit) 10767. So adding filled NA values slightly increases **mean**.  
 NEW **median** is 10909 and is PREVIOUS (where NA omit) 10765. So adding filled NA values increases **median**.  
 
-###Are there differences in activity patterns between weekdays and weekends?
+### Are there differences in activity patterns between weekdays and weekends?
 Now I'm going to create a new factor variable with 2 levels Weekend & weekday
 
 

@@ -97,7 +97,7 @@ ggplot(StepsPerDay_n, aes(steps_pd)) +
         scale_y_continuous (breaks = seq(0, 26, 2), minor_breaks = NULL)
 ```
 
-As wew can see number of days in the interval 10000-12000 steps increased as compared with previous histogram.  
+As we can see number of days in the interval 10000-12000 steps increased as compared with previous histogram.  
 Now I'm going to calculate **NEW** **mean** and **median** of the total number of the steps per day and compare they with previous. 
 ```{r calculating NEW mean and meadian}
 mean_filledNA <- ceiling(mean (StepsPerDay_n$steps_pd))
